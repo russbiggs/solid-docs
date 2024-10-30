@@ -465,9 +465,9 @@ This pattern provides a way to import the data function without loading anything
 
 ```jsx
 // src/pages/users/[id].data.js
-import { query } from "@solidjs/router";
+import { cache } from "@solidjs/router";
 
-export const getUser = query(async (id) => {
+export const getUser = cache(async (id) => {
 	return (await fetch(`https://swapi.tech/api/people/${id}/`)).json();
 }, "getUser");
 

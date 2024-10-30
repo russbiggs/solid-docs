@@ -5,7 +5,6 @@
 		"cache.mdx",
 		"create-async.mdx",
 		"create-async-store.mdx",
-		"query.mdx",
 		"response-helpers.mdx"
 	]
 }

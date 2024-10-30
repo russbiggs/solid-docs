@@ -45,9 +45,9 @@ Additionally, you can use it with [`cache`](/solid-router/reference/data-apis/ca
 That way if the user is not authenticated, the request will be redirected to the login page.
 
 ```tsx title="/routes/api/store/admin.ts"
-import { query, createAsync, redirect } from "@solidjs/router";
+import { cache, createAsync, redirect } from "@solidjs/router";
 
-const getUsers = query(async (id: string) => {
+const getUsers = cache(async (id: string) => {
   "use server";
   const user = await getUser();
   if (!user) throw redirect("/login");
